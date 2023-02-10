@@ -1,3 +1,3 @@
-# Netomi-Case_Study
+# Netomi Case Study
 
-Live link - https://netomi-case-study.vercel.app/
+Live Deployed link - https://netomi-case-study.vercel.app/
