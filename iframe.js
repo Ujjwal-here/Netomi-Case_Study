@@ -35,11 +35,12 @@ function formValidation() {
   window.parent.postMessage({ Result: errors }, "*");
 }
 
+const api =
+  "https://raw.githubusercontent.com/stefanbinder/countries-states/master/countries.json";
+
 window.onload = function () {
   const fetchCountries = async () => {
-    const response = await fetch(
-      "https://raw.githubusercontent.com/stefanbinder/countries-states/master/countries.json"
-    );
+    const response = await fetch(api);
     const data = await response.json();
     const select = document.getElementById("country");
     data.map((country) => {
@@ -79,9 +80,7 @@ function fillStates(data) {
 
 function fetchStates() {
   const fetchStatesInner = async () => {
-    const response = await fetch(
-      "https://raw.githubusercontent.com/stefanbinder/countries-states/master/countries.json"
-    );
+    const response = await fetch(api);
     const data = await response.json();
     fillStates(data);
   };
